@@ -1,5 +1,8 @@
 declare var wx: any;
 
+// https://stackoverflow.com/questions/15141762/how-to-initialize-a-javascript-date-to-a-particular-time-zone
+// https://github.com/iansinnott/jstz
+
 const date4offset = (inOffset: number = 8, inValue?: any) => {
   const date = typeof inValue === 'undefined' ? new Date() : new Date(inValue);
   const currentOffset = date.getTimezoneOffset() / 60; //(-8)
